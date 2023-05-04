@@ -86,3 +86,68 @@ footer p{
     margin: 10px;
     flex: 25%;
 }
+
+.servicios{
+    width: 100%;
+    min-height: 300px;
+    background-color: #9EF01A;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 200px);
+    padding: 20px;
+    grid-gap: 15px;
+}
+
+.item{
+    border: 3px solid #333;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.9s;
+    filter: grayscale(100);
+    font-size: 50px;
+    font-size: 500;
+    font-family: 'Rajdhani', sans-serif;
+    color:#ff006e;
+    text-transform: uppercase;
+}
+
+.item:hover{
+    transform: scale(1.09);
+    transition: all 0.9s;
+    filter: grayscale(0);
+    color: gold;
+    text-transform: capitalize;
+    
+}
+
+.item1{
+    background-image: url(./images/servicios/costanera.jpg);
+}
+
+.item2{
+    background-image: url(./images/servicios/playa.jpg);
+}
+
+.item3{
+    background-image: url(./images/servicios/carnaval.jpg);
+}
+
+.item4{
+    background-image: url(./images/servicios/pacu.jpg);
+}
+
+.item5{
+    background-image: url(./images/servicios/terminal.jpg);
+}
+
+.item6{
+    background-image: url(./images/servicios/alojamientos.jpg);
+}
+
+.item7{
+    background-image: url(./images/servicios/cabañas.png);
+}
+
+.item8{
+    background-image: url(./images/servicios/pesca.jpg);
+}
