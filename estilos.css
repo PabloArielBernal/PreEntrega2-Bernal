@@ -56,3 +56,33 @@ footer p{
 .redes a:hover{
     color: gold;
 }
+
+.flex-container {
+    display: flex;
+    background-color: gold;
+    padding: 5px;
+    height: 3400px;
+    flex-wrap: wrap;
+}
+
+.flex-container img{
+    margin-top: 10px;
+    transition: all 0.9s;
+}
+
+.flex-container img:hover{
+    transform: scale(1.05);
+    transition: all 0.9s;
+}
+
+#ciudad{
+    width: 100%;
+}
+
+.flex-item {
+    background-color: #78e667;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    flex: 25%;
+}
