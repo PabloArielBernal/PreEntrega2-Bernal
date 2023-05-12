@@ -1,0 +1,31 @@
+#historia {
+    margin: 0;
+    padding: 100px;
+    width: 1000px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+#historia {
+    background-color: #000;
+    color: $color1;
+    font-family: nexa;
+    font-weight: 400;
+    font-size: 30px;
+    max-width: 1600px;
+    display: flex;
+    padding: 150px;
+    border-radius: 30px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+}
+
+.historia {
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pacifico', cursive;
+    font-weight: 200;
+}
