@@ -71,6 +71,7 @@ nav a:hover{
     color: gold;
     text-decoration: none;
     border-radius: 10px;
+    transition: all 0.5s;
 }
 
 
@@ -87,6 +88,11 @@ h2{
 h2:hover{
     color: gold;
     text-shadow: 0 0 5px #000,  0 0 5px #000, 0 0 5px #000,  0 0 5px #000;
+    transition: all 0.2s;
+}
+
+h3{
+    margin-left: 20px;
 }
 
 .subtitulo{
@@ -127,6 +133,9 @@ h2:hover{
     margin-bottom: 100px;
 }
 
+#foto{
+    transition: all 0.9s;
+}
 
 #foto:hover{
     transform: scale(1.09);
@@ -141,7 +150,7 @@ h2:hover{
     display: flex;
     background-color: gold;
     padding: 5px;
-    height: 3400px;
+    min-height: 5900px;
     flex-wrap: wrap;
 }
 
@@ -333,40 +342,39 @@ h2:hover{
     transition: all 0.9s;
     filter: grayscale(0);
     color: gold;
-    text-transform: capitalize;
     
 }
 
 .item1{
-    background-image: url(./images/servicios/costanera.jpg);
+    background-image: url(./images/servicios/costanera.avif);
 }
 
 .item2{
-    background-image: url(./images/servicios/playa.jpg);
+    background-image: url(./images/servicios/playa.avif);
 }
 
 .item3{
-    background-image: url(./images/servicios/carnaval.jpg);
+    background-image: url(./images/servicios/carnaval.avif);
 }
 
 .item4{
-    background-image: url(./images/servicios/pacu.jpg);
+    background-image: url(./images/servicios/pacu.avif);
 }
 
 .item5{
-    background-image: url(./images/servicios/terminal.jpg);
+    background-image: url(./images/servicios/terminal.avif);
 }
 
 .item6{
-    background-image: url(./images/servicios/alojamientos.jpg);
+    background-image: url(./images/servicios/alojamientos.avif);
 }
 
 .item7{
-    background-image: url(./images/servicios/cabañas.png);
+    background-image: url(./images/servicios/cabañas.avif);
 }
 
 .item8{
-    background-image: url(./images/servicios/pesca.jpg);
+    background-image: url(./images/servicios/pesca.avif);
 }
 
 footer{
@@ -663,6 +671,10 @@ footer p{
         text-align: center;
     }
 
+    .flex-container{
+        min-height: 18800px;
+    }
+
     .historia{
         font-size: 50px;
         display: flex;
@@ -838,4 +850,8 @@ footer p{
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 200px 200px;
     }
+}
+
+.flex-container{
+    min-height: 5900px;
 }
