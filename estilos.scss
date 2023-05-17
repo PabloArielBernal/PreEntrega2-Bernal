@@ -110,10 +110,6 @@ h2:hover {
     transition: all 0.2s;
 }
 
-h3 {
-    margin-left: 20px;
-}
-
 .subtitulo {
     color: white;
     background-color: #084d6e;
@@ -161,81 +157,40 @@ h3 {
     transition: all 0.9s;
 }
 
-#banner1 {
-    color: white;
-    background-color: #0066cc;
-    display: inline-block;
-    height: 500px;
-    width: 100%;
-    border: 3px solid white;
-    padding: 20px;
-    font-size: 25px;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 500;
-    padding-right: 1000px;
-    padding-left: 100px;
-    padding-top: 100px;
-    margin-bottom: 75px;
+//maps - incio
+
+$banners: (
+    /*Declaramos nuestro mapa*/
+    pesca: #0066cc,
+    playa: #FFD700,
+    carnaval: #ff006e,
+    festivales: #7400b8,
+
+    );
+
+/*Creamos el bucle para usar los valores del mapa*/
+@each $red, $font in $banners {
+    .banner--#{$red} {
+        color: #fff;
+        background-color: $font;
+        display: inline-block;
+        height: 500px;
+        width: 100%;
+        border: 3px solid white;
+        padding: 20px;
+        font-size: 25px;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        padding-right: 1000px;
+        padding-left: 100px;
+        padding-top: 100px;
+        margin-bottom: 75px;
+    }
 }
 
-#banner2 {
-    color: black;
-    background-color: #FFD700;
-    display: inline-block;
-    height: 500px;
-    width: 100%;
-    border: 3px solid white;
-    padding: 20px;
-    font-size: 25px;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 500;
-    padding-right: 1000px;
-    padding-left: 100px;
-    padding-top: 100px;
-    margin-bottom: 75px;
-}
-
-#banner3 {
-    color: black;
-    background-color: #ff006e;
-    display: inline-block;
-    height: 500px;
-    width: 100%;
-    border: 3px solid white;
-    padding: 20px;
-    font-size: 25px;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 500;
-    padding-right: 1000px;
-    padding-left: 100px;
-    padding-top: 100px;
-    margin-bottom: 75px;
-}
-
-#banner4 {
-    color: white;
-    background-color: #7400b8;
-    display: inline-block;
-    height: 500px;
-    width: 100%;
-    border: 3px solid white;
-    padding: 20px;
-    font-size: 25px;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 500;
-    padding-right: 1000px;
-    padding-left: 100px;
-    padding-top: 100px;
-    margin-bottom: 75px;
-}
+//maps -fin
 
 footer {
     width: 100%;
@@ -244,10 +199,9 @@ footer {
     background-color: #000;
     color: #fff;
     padding: 20px;
-}
-
-footer p {
-    margin-bottom: 20px;
+    & p{
+        margin-bottom: 20px;
+    }
 }
 
 .redes a {

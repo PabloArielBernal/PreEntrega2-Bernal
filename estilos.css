@@ -89,10 +89,6 @@ h2:hover {
   transition: all 0.2s;
 }
 
-h3 {
-  margin-left: 20px;
-}
-
 .subtitulo {
   color: white;
   background-color: #084d6e;
@@ -139,8 +135,9 @@ h3 {
   transition: all 0.9s;
 }
 
-#banner1 {
-  color: white;
+/*Creamos el bucle para usar los valores del mapa*/
+.banner--pesca {
+  color: #fff;
   background-color: #0066cc;
   display: inline-block;
   height: 500px;
@@ -158,8 +155,8 @@ h3 {
   margin-bottom: 75px;
 }
 
-#banner2 {
-  color: black;
+.banner--playa {
+  color: #fff;
   background-color: #FFD700;
   display: inline-block;
   height: 500px;
@@ -177,8 +174,8 @@ h3 {
   margin-bottom: 75px;
 }
 
-#banner3 {
-  color: black;
+.banner--carnaval {
+  color: #fff;
   background-color: #ff006e;
   display: inline-block;
   height: 500px;
@@ -196,8 +193,8 @@ h3 {
   margin-bottom: 75px;
 }
 
-#banner4 {
-  color: white;
+.banner--festivales {
+  color: #fff;
   background-color: #7400b8;
   display: inline-block;
   height: 500px;
@@ -223,7 +220,6 @@ footer {
   color: #fff;
   padding: 20px;
 }
-
 footer p {
   margin-bottom: 20px;
 }
@@ -524,7 +520,6 @@ footer p {
   min-height: 5900px;
   flex-wrap: wrap;
 }
-
 .flex-container img {
   margin-top: 10px;
   transition: all 0.9s;
@@ -545,6 +540,7 @@ footer p {
 
 img {
   width: 100%;
+  border-radius: 20px;
 }
 
 #ciudad {
@@ -588,6 +584,7 @@ img {
   font-family: "Rajdhani", sans-serif;
   color: #ff006e;
   text-transform: uppercase;
+  background-image: url(./images/servicios/img1.avif);
 }
 
 .item:hover {
@@ -598,35 +595,35 @@ img {
 }
 
 .item1 {
-  background-image: url(./images/servicios/costanera.avif);
+  background-image: url(./images/servicios/img1.avif);
 }
 
 .item2 {
-  background-image: url(./images/servicios/playa.avif);
+  background-image: url(./images/servicios/img2.avif);
 }
 
 .item3 {
-  background-image: url(./images/servicios/carnaval.avif);
+  background-image: url(./images/servicios/img3.avif);
 }
 
 .item4 {
-  background-image: url(./images/servicios/pacu.avif);
+  background-image: url(./images/servicios/img4.avif);
 }
 
 .item5 {
-  background-image: url(./images/servicios/terminal.avif);
+  background-image: url(./images/servicios/img5.avif);
 }
 
 .item6 {
-  background-image: url(./images/servicios/alojamientos.avif);
+  background-image: url(./images/servicios/img6.avif);
 }
 
 .item7 {
-  background-image: url(./images/servicios/cabañas.avif);
+  background-image: url(./images/servicios/img7.avif);
 }
 
 .item8 {
-  background-image: url(./images/servicios/pesca.avif);
+  background-image: url(./images/servicios/img8.avif);
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -680,15 +677,6 @@ img {
   }
 }
 #historia {
-  margin: 0;
-  padding: 100px;
-  width: 1000px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 50px;
-}
-
-#historia {
   background-color: #000;
   color: #9EF01A;
   font-family: nexa;
@@ -711,6 +699,16 @@ img {
   font-weight: 200;
 }
 
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  #historia {
+    margin: 0;
+    padding: 100px;
+    width: 1000px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+  }
+}
 .historia {
   font-size: 70px;
   display: flex;
@@ -719,7 +717,11 @@ img {
   margin: 20px;
 }
 
-.comollegar {
+h3 {
+  margin-left: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3 .comollegar {
   margin-left: 300px;
   margin-bottom: 25px;
   display: inline-block;

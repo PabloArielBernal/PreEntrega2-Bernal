@@ -4,11 +4,10 @@
     padding: 5px;
     min-height: 5900px;
     flex-wrap: wrap;
-}
-
-.flex-container img {
-    margin-top: 10px;
-    transition: all 0.9s;
+    & img {
+        margin-top: 10px;
+        transition: all 0.9s;
+    }
 }
 
 .flex-container img:hover {
@@ -26,6 +25,7 @@
 
 img {
     width: 100%;
+    border-radius: 20px;
 }
 
 #ciudad {

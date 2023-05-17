@@ -1,11 +1,4 @@
-#historia {
-    margin: 0;
-    padding: 100px;
-    width: 1000px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-}
+
 
 #historia {
     background-color: #000;
@@ -28,4 +21,15 @@
     justify-content: center;
     font-family: 'Pacifico', cursive;
     font-weight: 200;
+}
+
+@media only screen and (min-width:200px) and (max-width:767px){
+    #historia {
+        margin: 0;
+        padding: 100px;
+        width: 1000px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 50px;
+    }
 }

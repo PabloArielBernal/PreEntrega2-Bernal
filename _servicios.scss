@@ -20,6 +20,7 @@
     font-family: 'Rajdhani', sans-serif;
     color: #ff006e;
     text-transform: uppercase;
+    background-image: url(./images/servicios/img1.avif);
 }
 
 .item:hover {
@@ -27,39 +28,12 @@
     transition: all 0.9s;
     filter: grayscale(0);
     color: gold;
-
 }
 
-.item1 {
-    background-image: url(./images/servicios/costanera.avif);
-}
-
-.item2 {
-    background-image: url(./images/servicios/playa.avif);
-}
-
-.item3 {
-    background-image: url(./images/servicios/carnaval.avif);
-}
-
-.item4 {
-    background-image: url(./images/servicios/pacu.avif);
-}
-
-.item5 {
-    background-image: url(./images/servicios/terminal.avif);
-}
-
-.item6 {
-    background-image: url(./images/servicios/alojamientos.avif);
-}
-
-.item7 {
-    background-image: url(./images/servicios/cabañas.avif);
-}
-
-.item8 {
-    background-image: url(./images/servicios/pesca.avif);
+@for $i from 1 through 8 {
+    .item#{$i} {
+        background-image: url(./images/servicios/img#{$i}.avif);
+    }
 }
 
 @media only screen and (min-width:200px) and (max-width:767px){

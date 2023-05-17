@@ -6,12 +6,18 @@
     margin: 20px;
 }
 
-.comollegar {
-    margin-left: 300px;
-    margin-bottom: 25px;
-    display: inline-block;
-    width: 1000px;
+h3 {
+    margin-left: 20px;
+    font-family: $fuente3;
+    .comollegar {
+        margin-left: 300px;
+        margin-bottom: 25px;
+        display: inline-block;
+        width: 1000px;
 }
+}
+
+
 
 .distancia {
     font-size: 40px;
