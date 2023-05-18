@@ -89,7 +89,7 @@ h2:hover {
   transition: all 0.2s;
 }
 
-.subtitulo {
+.subtitulo, .subtitulo2, .subtitulo1 {
   color: white;
   background-color: #084d6e;
   display: flex;
@@ -103,26 +103,12 @@ h2:hover {
 }
 
 .subtitulo1 {
-  color: white;
-  background-color: #084d6e;
-  display: flex;
-  height: 500px;
   max-width: 1900px;
-  border: 3px solid white;
-  padding: 20px;
-  font-size: 25px;
-  margin-bottom: 20px;
 }
 
 .subtitulo2 {
-  color: white;
-  background-color: #084d6e;
-  display: flex;
-  height: 400px;
+  height: 300px;
   max-width: 1700px;
-  border: 3px solid white;
-  padding: 20px;
-  font-size: 25px;
   margin-bottom: 100px;
 }
 
@@ -153,6 +139,7 @@ h2:hover {
   padding-left: 100px;
   padding-top: 100px;
   margin-bottom: 75px;
+  overflow: auto;
 }
 
 .banner--playa {
@@ -172,6 +159,7 @@ h2:hover {
   padding-left: 100px;
   padding-top: 100px;
   margin-bottom: 75px;
+  overflow: auto;
 }
 
 .banner--carnaval {
@@ -191,6 +179,7 @@ h2:hover {
   padding-left: 100px;
   padding-top: 100px;
   margin-bottom: 75px;
+  overflow: auto;
 }
 
 .banner--festivales {
@@ -210,6 +199,7 @@ h2:hover {
   padding-left: 100px;
   padding-top: 100px;
   margin-bottom: 75px;
+  overflow: auto;
 }
 
 footer {
@@ -260,17 +250,14 @@ footer p {
   box-shadow: 0 0 20px white;
 }
 
-@media only screen and (min-width: 200px) and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
   header {
     flex-direction: row;
-    min-width: 1110px;
-    height: 230px;
+    width: 1100px;
+    height: 400px;
   }
   body {
     width: 1100px;
-  }
-  h2 {
-    margin-left: 500px;
   }
   .logo {
     background-color: #38B000;
@@ -278,9 +265,10 @@ footer p {
   .esquina {
     font-size: 150px;
     margin-left: 150px;
-    margin-top: 80px;
+    margin-bottom: 100px;
     background-color: #38B000;
     width: 100%;
+    display: block;
   }
   .pestañas {
     display: flex;
@@ -288,14 +276,14 @@ footer p {
     margin-right: 1000px;
   }
   #carouselExampleIndicators {
-    width: 1000px;
+    width: 1100px;
   }
   h2 {
     display: flex;
     text-align: center;
     justify-content: center;
   }
-  .subtitulo {
+  .subtitulo, .subtitulo1, .subtitulo2 {
     width: 1000px;
     text-align: center;
   }
@@ -312,14 +300,14 @@ footer p {
     text-align: center;
     justify-content: center;
   }
-  #banner1 {
+  .banner--pesca {
     height: 1200px;
   }
-  #banner1 h2 {
+  .banner--pesca h2 {
     margin-left: 450px;
     font-size: 100px;
   }
-  #banner1 p {
+  .banner--pesca p {
     width: 700px;
     text-align: center;
     display: flex;
@@ -327,14 +315,14 @@ footer p {
     font-size: 30px;
     margin-left: 100px;
   }
-  #banner2 {
+  .banner--playa {
     height: 1200px;
   }
-  #banner2 h2 {
+  .banner--playa h2 {
     margin-left: 450px;
     font-size: 100px;
   }
-  #banner2 p {
+  .banner--playa p {
     width: 700px;
     text-align: center;
     display: flex;
@@ -342,14 +330,14 @@ footer p {
     font-size: 30px;
     margin-left: 100px;
   }
-  #banner3 {
+  .banner--carnaval {
     height: 1200px;
   }
-  #banner3 h2 {
+  .banner--carnaval h2 {
     margin-left: 450px;
     font-size: 100px;
   }
-  #banner3 p {
+  .banner--carnaval p {
     width: 700px;
     text-align: center;
     display: flex;
@@ -357,14 +345,14 @@ footer p {
     font-size: 30px;
     margin-left: 100px;
   }
-  #banner4 {
+  .banner--festivales {
     height: 1200px;
   }
-  #banner4 h2 {
+  .banner--festivales h2 {
     margin-left: 450px;
     font-size: 100px;
   }
-  #banner4 p {
+  .banner--festivales p {
     width: 700px;
     text-align: center;
     display: flex;
@@ -376,7 +364,7 @@ footer p {
     width: 1106px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
   header {
     flex-direction: row;
     min-width: 1110px;
@@ -409,9 +397,6 @@ footer p {
     display: flex;
     text-align: center;
   }
-  .flex-container {
-    min-height: 18800px;
-  }
   .historia {
     font-size: 50px;
     display: flex;
@@ -419,7 +404,7 @@ footer p {
     text-align: center;
     background-position: center;
   }
-  .subtitulo {
+  .subtitulo, .subtitulo1, .subtitulo2 {
     width: 1000px;
     text-align: center;
   }
@@ -436,14 +421,14 @@ footer p {
     text-align: center;
     justify-content: center;
   }
-  #banner1 {
+  .banner--playa {
     height: 1200px;
   }
-  #banner1 h2 {
+  .banner--playa h2 {
     margin-left: 450px;
     font-size: 100px;
   }
-  #banner1 p {
+  .banner--playa p {
     width: 700px;
     text-align: center;
     display: flex;
@@ -451,14 +436,14 @@ footer p {
     font-size: 30px;
     margin-left: 100px;
   }
-  #banner2 {
+  .banner--playa {
     height: 1200px;
   }
-  #banner2 h2 {
+  .banner--playa h2 {
     margin-left: 450px;
     font-size: 100px;
   }
-  #banner2 p {
+  .banner--playa p {
     width: 700px;
     text-align: center;
     display: flex;
@@ -466,14 +451,14 @@ footer p {
     font-size: 30px;
     margin-left: 100px;
   }
-  #banner3 {
+  .banner--carnaval {
     height: 1200px;
   }
-  #banner3 h2 {
+  .banner--carnaval h2 {
     margin-left: 450px;
     font-size: 100px;
   }
-  #banner3 p {
+  .banner--carnaval p {
     width: 700px;
     text-align: center;
     display: flex;
@@ -481,14 +466,14 @@ footer p {
     font-size: 30px;
     margin-left: 100px;
   }
-  #banner4 {
+  .banner--festivales {
     height: 1200px;
   }
-  #banner4 h2 {
+  .banner--festivales h2 {
     margin-left: 450px;
     font-size: 100px;
   }
-  #banner4 p {
+  .banner--festivales p {
     width: 700px;
     text-align: center;
     display: flex;
@@ -502,7 +487,7 @@ footer p {
     display: inline-block;
     width: 1000px;
   }
-  .distancia {
+  .distancia, .viaje {
     font-size: 40px;
     margin: 20px;
     margin-left: 25px;
@@ -515,10 +500,14 @@ footer p {
 }
 .flex-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: gold;
   padding: 5px;
-  min-height: 5900px;
-  flex-wrap: wrap;
+  height: 6500px;
+  /* @include movil(){
+      height: 3500px;
+  } */
 }
 .flex-container img {
   margin-top: 10px;
@@ -531,11 +520,14 @@ footer p {
 }
 
 .flex-item {
-  background-color: #78e667;
+  background-color: gold;
   width: 400px;
   height: 400px;
   margin: 10px;
   flex: 25%;
+  /* @include movil(){
+      flex: 100%;
+  } */
 }
 
 img {
@@ -547,21 +539,30 @@ img {
   width: 100%;
 }
 
-@media only screen and (min-width: 200px) and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
+  .flex-container {
+    height: 28500px;
+  }
   .flex-item {
     flex: 100%;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .flex-item {
-    flex: 40%;
-  }
+/* @media only screen and (min-width:200px) and (max-width:767px){
+    .flex-item {
+        flex: 100%;
+    }
+} */
+/* @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .flex-item{
+        flex: 40%;
+    }
 }
-@media only screen and (min-width: 1024px) {
-  .flex-container {
+
+@media only screen and (min-width:1024px) {
+    .flex-container {
     min-height: 5900px;
-  }
 }
+} */
 .servicios {
   width: 100%;
   min-height: 300px;
@@ -728,13 +729,6 @@ h3 .comollegar {
   width: 1000px;
 }
 
-.distancia {
-  font-size: 40px;
-  margin: 20px;
-  margin-left: 25px;
-  width: 1000px;
-}
-
 .comollegar {
   font-size: 70px;
   display: flex;
@@ -756,7 +750,7 @@ h3 .comollegar {
   color: gold;
 }
 
-.distancia {
+.distancia, .viaje {
   font-size: 30px;
   font-family: nexa;
   font-weight: 500;
@@ -767,6 +761,22 @@ h3 .comollegar {
   display: inline-block;
   margin: 30px;
   padding: 50px;
+}
+
+.viaje {
+  width: 700px;
+  height: auto;
+  text-align: left;
+  padding-left: 80px;
+}
+
+@media only screen and (max-width: 480px) {
+  .distancia, .viaje {
+    font-size: 40px;
+    margin: 20px;
+    margin-left: 25px;
+    width: 1000px;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

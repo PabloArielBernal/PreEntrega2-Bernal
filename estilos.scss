@@ -1,13 +1,13 @@
 // Paleta de colores
-$color1:#9EF01A;
-$color2:#38B000;
-$color3:#084d6e;
-$color4:#78e667;
-$color5:#80ff00;
-$color6:#0066cc;
-$color7:#FFD700;
-$color8:#ff006e;
-$color9:#7400b8;
+$color1: #9EF01A;
+$color2: #38B000;
+$color3: #084d6e;
+$color4: #78e667;
+$color5: #80ff00;
+$color6: #0066cc;
+$color7: #FFD700;
+$color8: #ff006e;
+$color9: #7400b8;
 
 //fonts
 $fuente1: nexa;
@@ -125,26 +125,14 @@ h2:hover {
 
 
 .subtitulo1 {
-    color: white;
-    background-color: #084d6e;
-    display: flex;
-    height: 500px;
+    @extend .subtitulo;
     max-width: 1900px;
-    border: 3px solid white;
-    padding: 20px;
-    font-size: 25px;
-    margin-bottom: 20px;
 }
 
 .subtitulo2 {
-    color: white;
-    background-color: #084d6e;
-    display: flex;
-    height: 400px;
+    @extend .subtitulo;
+    height: 300px;
     max-width: 1700px;
-    border: 3px solid white;
-    padding: 20px;
-    font-size: 25px;
     margin-bottom: 100px;
 }
 
@@ -165,11 +153,11 @@ $banners: (
     playa: #FFD700,
     carnaval: #ff006e,
     festivales: #7400b8,
-
-    );
+);
 
 /*Creamos el bucle para usar los valores del mapa*/
-@each $red, $font in $banners {
+@each $red,
+$font in $banners {
     .banner--#{$red} {
         color: #fff;
         background-color: $font;
@@ -187,6 +175,7 @@ $banners: (
         padding-left: 100px;
         padding-top: 100px;
         margin-bottom: 75px;
+        overflow: auto;
     }
 }
 
@@ -199,7 +188,8 @@ footer {
     background-color: #000;
     color: #fff;
     padding: 20px;
-    & p{
+
+    & p {
         margin-bottom: 20px;
     }
 }
@@ -240,19 +230,21 @@ footer {
     box-shadow: 0 0 20px white;
 }
 
-@media only screen and (min-width:200px) and (max-width:767px) {
+@mixin movil() {
+    @media only screen and (max-width:480px) {
+        @content;
+    }
+}
+
+    @include movil(){
     header {
         flex-direction: row;
-        min-width: 1110px;
-        height: 230px;
+        width: 1100px;
+        height: 400px;
     }
 
     body {
         width: 1100px;
-    }
-
-    h2 {
-        margin-left: 500px;
     }
 
     .logo {
@@ -262,9 +254,10 @@ footer {
     .esquina {
         font-size: 150px;
         margin-left: 150px;
-        margin-top: 80px;
+        margin-bottom: 100px;
         background-color: #38B000;
         width: 100%;
+        display: block;
     }
 
     .pestañas {
@@ -274,7 +267,7 @@ footer {
     }
 
     #carouselExampleIndicators {
-        width: 1000px;
+        width: 1100px;
     }
 
     h2 {
@@ -304,90 +297,77 @@ footer {
         justify-content: center;
     }
 
-    #banner1 {
+    .banner--pesca {
         height: 1200px;
-
-    }
-
-    #banner1 h2 {
+        h2 {
         margin-left: 450px;
         font-size: 100px;
-    }
-
-    #banner1 p {
+        }
+        p {
         width: 700px;
         text-align: center;
         display: flex;
         justify-content: center;
         font-size: 30px;
         margin-left: 100px;
+        }
     }
 
-    #banner2 {
+    .banner--playa {
         height: 1200px;
-
-    }
-
-    #banner2 h2 {
+        h2 {
         margin-left: 450px;
         font-size: 100px;
-    }
-
-    #banner2 p {
+        }
+        p {
         width: 700px;
         text-align: center;
         display: flex;
         justify-content: center;
         font-size: 30px;
         margin-left: 100px;
+        }
     }
 
-    #banner3 {
+    .banner--carnaval {
         height: 1200px;
-
-    }
-
-    #banner3 h2 {
+        h2 {
         margin-left: 450px;
         font-size: 100px;
-    }
-
-    #banner3 p {
+        }
+        p {
         width: 700px;
         text-align: center;
         display: flex;
         justify-content: center;
         font-size: 30px;
         margin-left: 100px;
+        }
     }
 
-    #banner4 {
+    .banner--festivales {
         height: 1200px;
-
-    }
-
-    #banner4 h2 {
+        h2 {
         margin-left: 450px;
         font-size: 100px;
-    }
-
-    #banner4 p {
+        }
+        p {
         width: 700px;
         text-align: center;
         display: flex;
         justify-content: center;
         font-size: 30px;
         margin-left: 100px;
+        }
     }
 
     footer {
         width: 1106px;
     }
-
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
     header {
         flex-direction: row;
         min-width: 1110px;
@@ -429,9 +409,6 @@ footer {
         text-align: center;
     }
 
-    .flex-container {
-        min-height: 18800px;
-    }
 
     .historia {
         font-size: 50px;
@@ -462,16 +439,16 @@ footer {
         justify-content: center;
     }
 
-    #banner1 {
+    .banner--playa {
         height: 1200px;
     }
 
-    #banner1 h2 {
+    .banner--playa h2 {
         margin-left: 450px;
         font-size: 100px;
     }
 
-    #banner1 p {
+    .banner--playa p {
         width: 700px;
         text-align: center;
         display: flex;
@@ -480,16 +457,16 @@ footer {
         margin-left: 100px;
     }
 
-    #banner2 {
+    .banner--playa {
         height: 1200px;
     }
 
-    #banner2 h2 {
+    .banner--playa h2 {
         margin-left: 450px;
         font-size: 100px;
     }
 
-    #banner2 p {
+    .banner--playa p {
         width: 700px;
         text-align: center;
         display: flex;
@@ -498,16 +475,16 @@ footer {
         margin-left: 100px;
     }
 
-    #banner3 {
+    .banner--carnaval {
         height: 1200px;
     }
 
-    #banner3 h2 {
+    .banner--carnaval h2 {
         margin-left: 450px;
         font-size: 100px;
     }
 
-    #banner3 p {
+    .banner--carnaval p {
         width: 700px;
         text-align: center;
         display: flex;
@@ -516,16 +493,16 @@ footer {
         margin-left: 100px;
     }
 
-    #banner4 {
+    .banner--festivales {
         height: 1200px;
     }
 
-    #banner4 h2 {
+    .banner--festivales h2 {
         margin-left: 450px;
         font-size: 100px;
     }
 
-    #banner4 p {
+    .banner--festivales p {
         width: 700px;
         text-align: center;
         display: flex;

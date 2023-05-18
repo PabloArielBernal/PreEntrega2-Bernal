@@ -14,16 +14,7 @@ h3 {
         margin-bottom: 25px;
         display: inline-block;
         width: 1000px;
-}
-}
-
-
-
-.distancia {
-    font-size: 40px;
-    margin: 20px;
-    margin-left: 25px;
-    width: 1000px;
+    }
 }
 
 .comollegar {
@@ -58,4 +49,21 @@ h3 {
     display: inline-block;
     margin: 30px;
     padding: 50px;
+}
+
+.viaje {
+    @extend .distancia;
+    width: 700px;
+    height: auto;
+    text-align: left;
+    padding-left: 80px;
+}
+
+@include movil(){
+    .distancia {
+    font-size: 40px;
+    margin: 20px;
+    margin-left: 25px;
+    width: 1000px;
+    }
 }
