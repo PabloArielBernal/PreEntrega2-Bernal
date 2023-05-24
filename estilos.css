@@ -4,7 +4,7 @@
 font-family: 'Pacifico', cursive;
 font-family: 'Rajdhani', sans-serif; */
 @font-face {
-  font-family: nexa;
+  font-family: "nexa";
   src: url(/fonts/Nexa-ExtraLight.ttf);
 }
 * {
@@ -18,33 +18,56 @@ html {
 }
 
 body {
-  background-color: #9EF01A;
+  background-image: linear-gradient(to top, #53f01a 0%, rgb(179, 255, 160) 100%);
   margin: 0;
   padding: 0;
 }
 
 .logo img {
-  height: 160px;
+  height: 150px;
   width: 100%;
+  margin-top: 50px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #38B000;
+  background: rgb(56, 176, 0);
+  background: linear-gradient(0deg, rgb(56, 176, 0) 25%, rgb(0, 255, 106) 95%);
   height: 180px;
   align-items: end;
   padding: 0px 5px 4px 0;
 }
 
+.titulo {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 120px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all 0.4s;
+  background: rgb(237, 238, 174);
+  background: radial-gradient(circle, rgba(237, 238, 174, 0.356179972) 0%, rgba(80, 214, 75, 0.7483368347) 100%);
+}
+
+.titulo:hover {
+  color: gold;
+  text-shadow: 0 0 7px #000, 0 0 7px #000, 0 0 7px #000, 0 0 7px #000;
+  transition: all 0.4s;
+}
+
 .esquina {
-  font-size: 110px;
+  font-size: 150px;
   color: rgb(255, 255, 255);
   align-items: center;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
   font-family: "Rajdhani", sans-serif;
+  margin-left: 100px;
+  margin-top: 100px;
 }
 
 .carousel-inner {
@@ -57,20 +80,35 @@ header {
 nav a {
   color: white;
   background-color: black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "nexa";
   text-decoration: none;
+  font-weight: 900;
   padding-right: 30px;
-  font-size: 20px;
+  font-size: 23px;
   border-radius: 7px;
   padding: 4px;
   margin-right: 3px;
+  transition: all 0.6s;
 }
 
 nav a:hover {
   color: gold;
   text-decoration: none;
   border-radius: 10px;
-  transition: all 0.5s;
+  transition: all 0.6s;
+  padding: 10px 15px 8px 15px;
+}
+
+nav a:active {
+  transform: scale(0.95);
+}
+
+#carouselExampleIndicators {
+  border: #fff solid 2px;
+}
+#carouselExampleIndicators li {
+  height: 5px;
+  background-color: goldenrod;
 }
 
 h2 {
@@ -81,21 +119,22 @@ h2 {
   align-items: center;
   justify-content: center;
   display: flex;
+  transition: all 0.4s;
 }
 
 h2:hover {
   color: gold;
-  text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
-  transition: all 0.2s;
+  text-shadow: 0 0 7px #000, 0 0 7px #000, 0 0 7px #000, 0 0 7px #000;
+  transition: all 0.4s;
 }
 
 .subtitulo, .subtitulo2, .subtitulo1 {
-  color: white;
-  background-color: #084d6e;
+  color: #fff;
+  background-color: #1caa74;
   display: flex;
   max-height: 500px;
-  max-width: 1500px;
-  border: 3px solid white;
+  width: 100%;
+  border: 3px solid rgb(254, 182, 0);
   padding: 20px;
   font-size: 25px;
   align-items: center;
@@ -103,12 +142,12 @@ h2:hover {
 }
 
 .subtitulo1 {
-  max-width: 1900px;
+  width: 100%;
 }
 
 .subtitulo2 {
   height: 300px;
-  max-width: 1700px;
+  width: 100%;
   margin-bottom: 100px;
 }
 
@@ -124,7 +163,10 @@ h2:hover {
 /*Creamos el bucle para usar los valores del mapa*/
 .banner--pesca {
   color: #fff;
-  background-color: #0066cc;
+  background-image: url(./images/banners/pesca.avif);
+  background: linear-gradient(rgba(5, 7, 12, 0.75)), rgba(5, 7, 12, 0.75);
+  background-position: center;
+  background-size: cover;
   display: inline-block;
   height: 500px;
   width: 100%;
@@ -140,11 +182,19 @@ h2:hover {
   padding-top: 100px;
   margin-bottom: 75px;
   overflow: auto;
+}
+.banner--pesca p {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .banner--playa {
   color: #fff;
-  background-color: #FFD700;
+  background-image: url(./images/banners/pesca.avif);
+  background: linear-gradient(rgba(5, 7, 12, 0.75)), rgba(5, 7, 12, 0.75);
+  background-position: center;
+  background-size: cover;
   display: inline-block;
   height: 500px;
   width: 100%;
@@ -160,11 +210,19 @@ h2:hover {
   padding-top: 100px;
   margin-bottom: 75px;
   overflow: auto;
+}
+.banner--playa p {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .banner--carnaval {
   color: #fff;
-  background-color: #ff006e;
+  background-image: url(./images/banners/pesca.avif);
+  background: linear-gradient(rgba(5, 7, 12, 0.75)), rgba(5, 7, 12, 0.75);
+  background-position: center;
+  background-size: cover;
   display: inline-block;
   height: 500px;
   width: 100%;
@@ -181,10 +239,18 @@ h2:hover {
   margin-bottom: 75px;
   overflow: auto;
 }
+.banner--carnaval p {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+}
 
 .banner--festivales {
   color: #fff;
-  background-color: #7400b8;
+  background-image: url(./images/banners/pesca.avif);
+  background: linear-gradient(rgba(5, 7, 12, 0.75)), rgba(5, 7, 12, 0.75);
+  background-position: center;
+  background-size: cover;
   display: inline-block;
   height: 500px;
   width: 100%;
@@ -200,6 +266,32 @@ h2:hover {
   padding-top: 100px;
   margin-bottom: 75px;
   overflow: auto;
+}
+.banner--festivales p {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.banner--playa {
+  background-image: url(./images/banners/playa.avif);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner--carnaval {
+  background-image: url(./images/banners/carnaval.avif);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner--festivales {
+  background-image: url(./images/banners/festivales.avif);
+  background-position: center;
+  background-size: cover;
+}
+.banner--festivales p {
+  background: linear-gradient(rgba(5, 7, 12, 0.75)), rgba(5, 7, 12, 0.75);
 }
 
 footer {
@@ -253,35 +345,146 @@ footer p {
 @media only screen and (max-width: 480px) {
   header {
     flex-direction: row;
-    width: 1100px;
-    height: 400px;
+    width: 100%;
+    height: 1280px;
+    display: inline-block;
   }
   body {
-    width: 1100px;
+    width: 1200px;
   }
-  .logo {
-    background-color: #38B000;
-  }
-  .esquina {
-    font-size: 150px;
-    margin-left: 150px;
-    margin-bottom: 100px;
-    background-color: #38B000;
-    width: 100%;
+  nav a {
+    color: #FFF;
+    height: 120px;
+    width: 93%;
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-size: 60px;
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
     display: block;
+    margin: 25px;
   }
-  .pestañas {
-    display: flex;
-    margin-top: 1000px;
-    margin-right: 1000px;
+  .logo img {
+    height: 300px;
+    width: 100%;
+    padding-bottom: 10px;
   }
   #carouselExampleIndicators {
-    width: 1100px;
+    width: 1200px;
   }
   h2 {
     display: flex;
     text-align: center;
     justify-content: center;
+  }
+  .subtitulo, .subtitulo1, .subtitulo2 {
+    width: 1000px;
+    text-align: center;
+  }
+  .subtitulo1 {
+    width: 1000px;
+    height: 600px;
+    margin-bottom: 25px;
+    text-align: center;
+    justify-content: center;
+  }
+  .subtitulo2 {
+    width: 1000px;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+  }
+  .banner--pesca {
+    height: 1200px;
+  }
+  .banner--pesca h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--pesca p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--playa {
+    height: 1200px;
+    background-image: url(./images/banners/playa.avif);
+    background-position: center;
+    background-size: cover;
+  }
+  .banner--playa h2 {
+    margin-top: 500px;
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--playa p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--carnaval {
+    height: 1200px;
+  }
+  .banner--carnaval h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--carnaval p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--festivales {
+    height: 1200px;
+  }
+  .banner--festivales h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--festivales p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  footer {
+    width: 1200px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1200px) {
+  header {
+    flex-direction: row;
+    min-width: 1110px;
+    height: 230px;
+  }
+  body {
+    width: 1200px;
+  }
+  h2 {
+    margin-left: 500px;
+  }
+  .pestañas {
+    display: flex;
+  }
+  #carouselExampleIndicators {
+    width: 1110px;
+  }
+  h2 {
+    display: flex;
+    text-align: center;
   }
   .subtitulo, .subtitulo1, .subtitulo2 {
     width: 1000px;
@@ -364,150 +567,28 @@ footer p {
     width: 1106px;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
-  header {
-    flex-direction: row;
-    min-width: 1110px;
-    height: 230px;
-  }
-  body {
-    width: 1110px;
-  }
-  h2 {
-    margin-left: 500px;
-  }
-  .logo {
-    background-color: #38B000;
-  }
-  .esquina {
-    font-size: 150px;
-    margin-left: 50px;
-    margin-right: 80px;
-    margin-top: 80px;
-    background-color: #38B000;
-    width: 100%;
-  }
-  .pestañas {
-    display: flex;
-  }
-  #carouselExampleIndicators {
-    width: 1110px;
-  }
-  h2 {
-    display: flex;
-    text-align: center;
-  }
-  .historia {
-    font-size: 50px;
-    display: flex;
-    margin: 20px;
-    text-align: center;
-    background-position: center;
-  }
-  .subtitulo, .subtitulo1, .subtitulo2 {
-    width: 1000px;
-    text-align: center;
-  }
-  .subtitulo1 {
-    width: 1000px;
-    height: 600px;
-    margin-bottom: 25px;
-    text-align: center;
-    justify-content: center;
-  }
-  .subtitulo2 {
-    width: 1000px;
-    height: 500px;
-    text-align: center;
-    justify-content: center;
-  }
-  .banner--playa {
-    height: 1200px;
-  }
-  .banner--playa h2 {
-    margin-left: 450px;
-    font-size: 100px;
-  }
-  .banner--playa p {
-    width: 700px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    margin-left: 100px;
-  }
-  .banner--playa {
-    height: 1200px;
-  }
-  .banner--playa h2 {
-    margin-left: 450px;
-    font-size: 100px;
-  }
-  .banner--playa p {
-    width: 700px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    margin-left: 100px;
-  }
-  .banner--carnaval {
-    height: 1200px;
-  }
-  .banner--carnaval h2 {
-    margin-left: 450px;
-    font-size: 100px;
-  }
-  .banner--carnaval p {
-    width: 700px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    margin-left: 100px;
-  }
-  .banner--festivales {
-    height: 1200px;
-  }
-  .banner--festivales h2 {
-    margin-left: 450px;
-    font-size: 100px;
-  }
-  .banner--festivales p {
-    width: 700px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    margin-left: 100px;
-  }
-  .comollegar {
-    margin-left: 300px;
-    margin-bottom: 25px;
-    display: inline-block;
-    width: 1000px;
-  }
-  .distancia, .viaje {
-    font-size: 40px;
-    margin: 20px;
-    margin-left: 25px;
-    width: 1000px;
-  }
-  footer {
-    width: 1106px;
-  }
-  /* fin index */
+/* fin index */
+.titulo2 {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 90px;
+  padding: 70px 0 70px 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all 0.4s;
+  background: rgb(247, 255, 114);
+  background: radial-gradient(circle, rgba(247, 255, 114, 0) 0%, rgba(66, 203, 167, 0.7483368347) 100%);
 }
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: gold;
+  background-image: linear-gradient(to top, #53f01a 0%, rgb(157, 255, 133) 100%);
   padding: 5px;
   height: 6500px;
-  /* @include movil(){
-      height: 3500px;
-  } */
 }
 .flex-container img {
   margin-top: 10px;
@@ -520,14 +601,10 @@ footer p {
 }
 
 .flex-item {
-  background-color: gold;
   width: 400px;
   height: 400px;
   margin: 10px;
   flex: 25%;
-  /* @include movil(){
-      flex: 100%;
-  } */
 }
 
 img {
@@ -541,7 +618,7 @@ img {
 
 @media only screen and (max-width: 480px) {
   .flex-container {
-    height: 28500px;
+    height: 31000px;
   }
   .flex-item {
     flex: 100%;
@@ -677,11 +754,14 @@ img {
     grid-template-rows: 200px 200px;
   }
 }
-#historia {
+#historia, #historia1 {
   background-color: #000;
-  color: #9EF01A;
+  background-image: url(./images/banners/1.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #084d6e;
   font-family: nexa;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 30px;
   max-width: 1600px;
   display: flex;
@@ -689,6 +769,21 @@ img {
   border-radius: 30px;
   margin-left: 150px;
   margin-bottom: 50px;
+  margin-top: 50px;
+}
+#historia p, #historia1 p {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#historia1 {
+  background-image: url(./images/banners/2.jpg);
+}
+
+.suhistoria {
+  display: inline-block;
 }
 
 .historia {
@@ -701,7 +796,7 @@ img {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
-  #historia {
+  #historia, #historia1 {
     margin: 0;
     padding: 100px;
     width: 1000px;
@@ -720,7 +815,7 @@ img {
 
 h3 {
   margin-left: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "nexa";
 }
 h3 .comollegar {
   margin-left: 300px;
@@ -732,7 +827,7 @@ h3 .comollegar {
 .comollegar {
   font-size: 70px;
   display: flex;
-  font-family: nexa;
+  font-family: "nexa";
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -752,7 +847,7 @@ h3 .comollegar {
 
 .distancia, .viaje {
   font-size: 30px;
-  font-family: nexa;
+  font-family: "nexa";
   font-weight: 500;
   background-color: #000;
   color: white;
@@ -777,6 +872,4 @@ h3 .comollegar {
     margin-left: 25px;
     width: 1000px;
   }
-}
-
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */

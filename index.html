@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Esquina, Corrientes, Pesca, Pesca rio parana, Turismo, Turismo en corrientes, Turismo en esquina corrientes, Ciudad, Historia, Carnaval, Playa, Vacaciones, Alojamientos, Cabañas, Camping, Hoteles, Departamentos">
+    <meta name="author" content="Pablo Ariel Bernal">
     <meta name="description" content="Toda la informacion sobre Esquina Corrientes, su ciudad, su historia y todo lo que ofrece en turismo">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,10 +19,9 @@
 
 <body>
     <header>
-        <a href="./index.html" class="logo">
-            <img src="./images/logo.png" alt="logo de la pagina">
-        </a>
-        <h1 class="esquina">esquina</h1>
+        <div class="esquina"><a href="./index.html" class="logo">
+            <img src="./images/principal.png" alt="logo principal"></a>
+        </div>
         <nav class="pestañas">
             <a class="pestaña" href="./index.html">Inicio</a>
             <a class="pestaña" href="./pages/ciudad.html">Ciudad</a>
@@ -69,12 +69,12 @@
                 <img src="./images/carousel/8.avif" class="d-block w-100" alt="...">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <button class="carousel-control-prev" id="cont-flecha" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+            <span class="carousel-control-prev-icon" id="flecha" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <button class="carousel-control-next" id="cont-flecha" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+            <span class="carousel-control-next-icon" id="flecha" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </button>
     </div><br>
@@ -82,7 +82,7 @@
 
     <section>
         <article><br><br>
-            <h2>Ciudad de esquina</h2><br><br><br>
+            <h1 class="titulo">Ciudad de esquina</h1><br><br><br>
             <aside class="subtitulo">
                 <p>Esquina es una ciudad situada en el rincón sudoeste de la provincia de Corrientes, Argentina. Además
                     de ser cabecera del departamento Esquina, posee destacada importancia turística, al ser sede de la

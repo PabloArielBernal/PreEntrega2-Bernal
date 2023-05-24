@@ -1,13 +1,23 @@
+.titulo2{
+    font-family: $fuente2;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 90px;
+    padding: 70px 0 70px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: all 0.4s;
+    background: rgb(247,255,114);
+    background: radial-gradient(circle, rgba(247,255,114,0) 0%, rgba(66,203,167,0.7483368347338936) 100%);
+}
 .flex-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: gold;
+    background-image: linear-gradient(to top, #53f01a 0%, rgb(157, 255, 133) 100%);
     padding: 5px;
     height: 6500px;
-    /* @include movil(){
-        height: 3500px;
-    } */
     & img {
         margin-top: 10px;
         transition: all 0.9s;
@@ -20,14 +30,10 @@
 }
 
 .flex-item {
-    background-color: gold;
     width: 400px;
     height: 400px;
     margin: 10px;
     flex: 25%;
-    /* @include movil(){
-        flex: 100%;
-    } */
 }
 
 img {
@@ -41,7 +47,7 @@ img {
 
 @include movil(){
     .flex-container {
-        height: 28500px;
+        height: 31000px;
     }
     .flex-item {
         flex: 100%;

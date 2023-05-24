@@ -10,7 +10,7 @@ $color8: #ff006e;
 $color9: #7400b8;
 
 //fonts
-$fuente1: nexa;
+$fuente1: 'nexa';
 $fuente2: 'Rajdhani', sans-serif;
 $fuente3: Verdana, Geneva, Tahoma, sans-serif;
 $fuente4: 'Pacifico', cursive;
@@ -23,7 +23,7 @@ font-family: 'Pacifico', cursive;
 font-family: 'Rajdhani', sans-serif; */
 
 @font-face {
-    font-family: nexa;
+    font-family: 'nexa';
     src: url(/fonts/Nexa-ExtraLight.ttf);
 }
 
@@ -38,33 +38,56 @@ html {
 }
 
 body {
-    background-color: #9EF01A;
+    background-image: linear-gradient(to top, #53f01a 0%, rgb(179, 255, 160) 100%);
     margin: 0;
     padding: 0;
 }
 
 .logo img {
-    height: 160px;
+    height: 150px;
     width: 100%;
+    margin-top: 50px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    background-color: #38B000;
+    background: rgb(56, 176, 0);
+    background: linear-gradient(0deg, rgba(56, 176, 0, 1) 25%, rgba(0, 255, 106, 1) 95%);
     height: 180px;
     align-items: end;
     padding: 0px 5px 4px 0;
 }
 
+.titulo {
+    font-family: $fuente2;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 120px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: all 0.4s;
+    background: rgb(237,238,174);
+    background: radial-gradient(circle, rgba(237,238,174,0.3561799719887955) 0%, rgba(80,214,75,0.7483368347338936) 100%);
+}
+
+.titulo:hover {
+    color: gold;
+    text-shadow: 0 0 7px #000, 0 0 7px #000, 0 0 7px #000, 0 0 7px #000;
+    transition: all 0.4s;
+}
+
 .esquina {
-    font-size: 110px;
+    font-size: 150px;
     color: rgb(255, 255, 255);
     align-items: center;
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     font-family: 'Rajdhani', sans-serif;
+    margin-left: 100px;
+    margin-top: 100px;
 }
 
 .carousel-inner {
@@ -77,22 +100,38 @@ header {
 nav a {
     color: white;
     background-color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: $fuente1;
     text-decoration: none;
+    font-weight: 900;
     padding-right: 30px;
-    font-size: 20px;
+    font-size: 23px;
     border-radius: 7px;
     padding: 4px;
     margin-right: 3px;
+    transition: all 0.6s;
+    ;
 }
 
 nav a:hover {
     color: gold;
     text-decoration: none;
     border-radius: 10px;
-    transition: all 0.5s;
+    transition: all 0.6s;
+    padding: 10px 15px 8px 15px;
 }
 
+nav a:active {
+        transform: scale(0.95);
+    }
+
+#carouselExampleIndicators {
+    border: #fff solid 2px;
+
+    & li {
+        height: 5px;
+        background-color: goldenrod;
+    }
+}
 
 h2 {
     font-family: 'Pacifico';
@@ -102,21 +141,22 @@ h2 {
     align-items: center;
     justify-content: center;
     display: flex;
+    transition: all 0.4s;
 }
 
 h2:hover {
     color: gold;
-    text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
-    transition: all 0.2s;
+    text-shadow: 0 0 7px #000, 0 0 7px #000, 0 0 7px #000, 0 0 7px #000;
+    transition: all 0.4s;
 }
 
 .subtitulo {
-    color: white;
-    background-color: #084d6e;
+    color: #fff;
+    background-color: #1caa74;
     display: flex;
     max-height: 500px;
-    max-width: 1500px;
-    border: 3px solid white;
+    width: 100%;
+    border: 3px solid rgb(254, 182, 0);
     padding: 20px;
     font-size: 25px;
     align-items: center;
@@ -126,13 +166,13 @@ h2:hover {
 
 .subtitulo1 {
     @extend .subtitulo;
-    max-width: 1900px;
+    width: 100%;
 }
 
 .subtitulo2 {
     @extend .subtitulo;
     height: 300px;
-    max-width: 1700px;
+    width: 100%;
     margin-bottom: 100px;
 }
 
@@ -160,7 +200,10 @@ $banners: (
 $font in $banners {
     .banner--#{$red} {
         color: #fff;
-        background-color: $font;
+        background-image: url(./images/banners/pesca.avif);
+        background: linear-gradient(rgba(5,7,12,0.75)),(rgba(5,7,12,0.75));
+        background-position: center;
+        background-size: cover;
         display: inline-block;
         height: 500px;
         width: 100%;
@@ -176,10 +219,36 @@ $font in $banners {
         padding-top: 100px;
         margin-bottom: 75px;
         overflow: auto;
+        p {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 20px;
+        }
     }
 }
 
 //maps -fin
+
+.banner--playa {
+    background-image: url(./images/banners/playa.avif);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner--carnaval {
+    background-image: url(./images/banners/carnaval.avif);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner--festivales {
+    background-image: url(./images/banners/festivales.avif);
+    background-position: center;
+    background-size: cover;
+    p {
+        background: linear-gradient(rgba(5,7,12,0.75)), (rgba(5,7,12,0.75));
+    }
+}
 
 footer {
     width: 100%;
@@ -236,44 +305,179 @@ footer {
     }
 }
 
-    @include movil(){
+@include movil() {
     header {
         flex-direction: row;
-        width: 1100px;
-        height: 400px;
+        width: 100%;
+        height: 1280px;
+        display: inline-block;
     }
 
     body {
-        width: 1100px;
+        width: 1200px;
     }
 
-    .logo {
-        background-color: #38B000;
+    nav {
+
+        a {
+            color: #FFF;
+            height: 120px;
+            width: 93%;
+            background-color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+            font-size: 60px;
+            border-radius: 20px;
+            padding: 25px;
+            position: relative;
+            display: block;
+            margin: 25px;
+        }
     }
 
-    .esquina {
-        font-size: 150px;
-        margin-left: 150px;
-        margin-bottom: 100px;
-        background-color: #38B000;
+    .logo img {
+        height: 300px;
         width: 100%;
-        display: block;
-    }
-
-    .pestañas {
-        display: flex;
-        margin-top: 1000px;
-        margin-right: 1000px;
-    }
+        padding-bottom: 10px;
+        }
 
     #carouselExampleIndicators {
-        width: 1100px;
+        width: 1200px;
     }
 
     h2 {
         display: flex;
         text-align: center;
         justify-content: center;
+    }
+
+    .subtitulo {
+        width: 1000px;
+        text-align: center;
+    }
+
+    .subtitulo1 {
+        width: 1000px;
+        height: 600px;
+        margin-bottom: 25px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .subtitulo2 {
+        width: 1000px;
+        height: 500px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .banner--pesca {
+        height: 1200px;
+
+        h2 {
+            margin-left: 450px;
+            font-size: 100px;
+        }
+
+        p {
+            width: 700px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-left: 100px;
+        }
+    }
+
+    .banner--playa {
+        height: 1200px;
+        background-image: url(./images/banners/playa.avif);
+        background-position: center;
+        background-size: cover;
+        h2 {
+            margin-top: 500px;
+            margin-left: 450px;
+            font-size: 100px;
+        }
+
+        p {
+            width: 700px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-left: 100px;
+        }
+    }
+
+    .banner--carnaval {
+        height: 1200px;
+
+        h2 {
+            margin-left: 450px;
+            font-size: 100px;
+        }
+
+        p {
+            width: 700px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-left: 100px;
+        }
+    }
+
+    .banner--festivales {
+        height: 1200px;
+
+        h2 {
+            margin-left: 450px;
+            font-size: 100px;
+        }
+
+        p {
+            width: 700px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-left: 100px;
+        }
+    }
+
+    footer {
+        width: 1200px;
+    }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 1200px) {
+    header {
+        flex-direction: row;
+        min-width: 1110px;
+        height: 230px;
+    }
+
+    body {
+        width: 1200px;
+    }
+
+    h2 {
+        margin-left: 500px;
+    }
+
+    .pestañas {
+        display: flex;
+    }
+
+    #carouselExampleIndicators {
+        width: 1110px;
+    }
+
+    h2 {
+        display: flex;
+        text-align: center;
     }
 
     .subtitulo {
@@ -299,65 +503,74 @@ footer {
 
     .banner--pesca {
         height: 1200px;
+
         h2 {
-        margin-left: 450px;
-        font-size: 100px;
+            margin-left: 450px;
+            font-size: 100px;
         }
+
         p {
-        width: 700px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: 100px;
+            width: 700px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-left: 100px;
         }
     }
 
     .banner--playa {
         height: 1200px;
+
         h2 {
-        margin-left: 450px;
-        font-size: 100px;
+            margin-left: 450px;
+            font-size: 100px;
         }
+
         p {
-        width: 700px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: 100px;
+            width: 700px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-left: 100px;
         }
     }
 
+
     .banner--carnaval {
         height: 1200px;
+
         h2 {
-        margin-left: 450px;
-        font-size: 100px;
+            margin-left: 450px;
+            font-size: 100px;
         }
+
         p {
-        width: 700px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: 100px;
+            width: 700px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-left: 100px;
         }
     }
 
     .banner--festivales {
         height: 1200px;
+
         h2 {
-        margin-left: 450px;
-        font-size: 100px;
+            margin-left: 450px;
+            font-size: 100px;
         }
+
         p {
-        width: 700px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: 100px;
+            width: 700px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-left: 100px;
         }
     }
 
@@ -366,171 +579,7 @@ footer {
     }
 }
 
-
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
-    header {
-        flex-direction: row;
-        min-width: 1110px;
-        height: 230px;
-    }
-
-    body {
-        width: 1110px;
-    }
-
-    h2 {
-        margin-left: 500px;
-    }
-
-    .logo {
-        background-color: #38B000;
-
-    }
-
-    .esquina {
-        font-size: 150px;
-        margin-left: 50px;
-        margin-right: 80px;
-        margin-top: 80px;
-        background-color: #38B000;
-        width: 100%;
-    }
-
-    .pestañas {
-        display: flex;
-    }
-
-    #carouselExampleIndicators {
-        width: 1110px;
-    }
-
-    h2 {
-        display: flex;
-        text-align: center;
-    }
-
-
-    .historia {
-        font-size: 50px;
-        display: flex;
-        margin: 20px;
-        text-align: center;
-        background-position: center;
-    }
-
-    .subtitulo {
-        width: 1000px;
-        text-align: center;
-    }
-
-    .subtitulo1 {
-        width: 1000px;
-        height: 600px;
-        margin-bottom: 25px;
-        text-align: center;
-        justify-content: center;
-
-    }
-
-    .subtitulo2 {
-        width: 1000px;
-        height: 500px;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .banner--playa {
-        height: 1200px;
-    }
-
-    .banner--playa h2 {
-        margin-left: 450px;
-        font-size: 100px;
-    }
-
-    .banner--playa p {
-        width: 700px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: 100px;
-    }
-
-    .banner--playa {
-        height: 1200px;
-    }
-
-    .banner--playa h2 {
-        margin-left: 450px;
-        font-size: 100px;
-    }
-
-    .banner--playa p {
-        width: 700px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: 100px;
-    }
-
-    .banner--carnaval {
-        height: 1200px;
-    }
-
-    .banner--carnaval h2 {
-        margin-left: 450px;
-        font-size: 100px;
-    }
-
-    .banner--carnaval p {
-        width: 700px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: 100px;
-    }
-
-    .banner--festivales {
-        height: 1200px;
-    }
-
-    .banner--festivales h2 {
-        margin-left: 450px;
-        font-size: 100px;
-    }
-
-    .banner--festivales p {
-        width: 700px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        margin-left: 100px;
-    }
-
-    .comollegar {
-        margin-left: 300px;
-        margin-bottom: 25px;
-        display: inline-block;
-        width: 1000px;
-    }
-
-    .distancia {
-        font-size: 40px;
-        margin: 20px;
-        margin-left: 25px;
-        width: 1000px;
-    }
-
-    footer {
-        width: 1106px;
-    }
-
-    /* fin index */
-}
+/* fin index */
 
 @import "_ciudad";
 @import "_servicios";
