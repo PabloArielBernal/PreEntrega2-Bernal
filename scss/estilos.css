@@ -1,0 +1,1091 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Rajdhani:wght@700&display=swap");
+/* font-family: 'Lobster', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Rajdhani', sans-serif; */
+@font-face {
+  font-family: "nexa";
+  src: url(../fonts/Nexa-ExtraLight.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(to top, #53f01a 0%, rgb(179, 255, 160) 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.logo img {
+  height: 125px;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(56, 176, 0);
+  background: linear-gradient(0deg, rgb(56, 176, 0) 25%, rgb(0, 255, 106) 95%);
+  height: 180px;
+  align-items: end;
+  padding: 0px 5px 4px 0;
+}
+
+.titulo {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 120px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all 0.4s;
+  background: rgb(237, 238, 174);
+  background: radial-gradient(circle, rgba(237, 238, 174, 0.356179972) 0%, rgba(80, 214, 75, 0.7483368347) 100%);
+}
+
+.titulo:hover {
+  color: gold;
+  text-shadow: 0 0 7px #000, 0 0 7px #000, 0 0 7px #000, 0 0 7px #000;
+  transition: all 0.4s;
+}
+
+.esquina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+.carousel-inner {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  background-color: black;
+  font-family: "nexa";
+  text-decoration: none;
+  font-weight: 900;
+  padding-right: 30px;
+  font-size: 23px;
+  border-radius: 7px;
+  padding: 4px;
+  margin-right: 3px;
+  transition: all 0.6s;
+}
+
+nav a:hover {
+  color: gold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.6s;
+  padding: 10px 15px 8px 15px;
+}
+
+nav a:active {
+  transform: scale(0.95);
+}
+
+#carouselExampleIndicators {
+  border: #fff solid 2px;
+}
+#carouselExampleIndicators li {
+  height: 5px;
+  background-color: goldenrod;
+}
+
+h2 {
+  font-family: "Pacifico";
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 70px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all 0.4s;
+}
+
+h2:hover {
+  color: gold;
+  text-shadow: 0 0 7px #000, 0 0 7px #000, 0 0 7px #000, 0 0 7px #000;
+  transition: all 0.4s;
+}
+
+.subtitulo, .subtitulo2, .subtitulo1 {
+  color: #fff;
+  background-color: #1caa74;
+  display: flex;
+  max-height: 500px;
+  width: 100%;
+  border: 3px solid rgb(254, 182, 0);
+  padding: 50px;
+  font-size: 25px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subtitulo1 {
+  width: 100%;
+}
+
+.subtitulo2 {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+#foto {
+  transition: all 0.9s;
+}
+
+#foto:hover {
+  transform: scale(1.09);
+  transition: all 0.9s;
+}
+
+/*Creamos el bucle para usar los valores del mapa*/
+.banner--pesca {
+  color: #fff;
+  background-image: url(../images/banners/pesca.avif);
+  background: linear-gradient(rgba(5, 7, 12, 0.75)), rgba(5, 7, 12, 0.75);
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  height: 500px;
+  width: 100%;
+  border: 3px solid white;
+  padding: 20px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 1000px;
+  padding-left: 100px;
+  padding-top: 100px;
+  margin-bottom: 75px;
+  overflow: auto;
+}
+.banner--pesca p {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 700px;
+}
+
+.banner--playa {
+  color: #fff;
+  background-image: url(../images/banners/pesca.avif);
+  background: linear-gradient(rgba(5, 7, 12, 0.75)), rgba(5, 7, 12, 0.75);
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  height: 500px;
+  width: 100%;
+  border: 3px solid white;
+  padding: 20px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 1000px;
+  padding-left: 100px;
+  padding-top: 100px;
+  margin-bottom: 75px;
+  overflow: auto;
+}
+.banner--playa p {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 700px;
+}
+
+.banner--carnaval {
+  color: #fff;
+  background-image: url(../images/banners/pesca.avif);
+  background: linear-gradient(rgba(5, 7, 12, 0.75)), rgba(5, 7, 12, 0.75);
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  height: 500px;
+  width: 100%;
+  border: 3px solid white;
+  padding: 20px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 1000px;
+  padding-left: 100px;
+  padding-top: 100px;
+  margin-bottom: 75px;
+  overflow: auto;
+}
+.banner--carnaval p {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 700px;
+}
+
+.banner--festivales {
+  color: #fff;
+  background-image: url(../images/banners/pesca.avif);
+  background: linear-gradient(rgba(5, 7, 12, 0.75)), rgba(5, 7, 12, 0.75);
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  height: 500px;
+  width: 100%;
+  border: 3px solid white;
+  padding: 20px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 1000px;
+  padding-left: 100px;
+  padding-top: 100px;
+  margin-bottom: 75px;
+  overflow: auto;
+}
+.banner--festivales p {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  min-width: 700px;
+}
+
+.banner--playa {
+  background-image: url(../images/banners/playa.avif);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner--carnaval {
+  background-image: url(../images/banners/carnaval.avif);
+  background-position: center;
+  background-size: cover;
+}
+
+.banner--festivales {
+  background-image: url(../images/banners/festivales.avif);
+  background-position: center;
+  background-size: cover;
+}
+.banner--festivales p {
+  background: linear-gradient(rgba(5, 7, 12, 0.75)), rgba(5, 7, 12, 0.75);
+}
+
+iframe {
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+footer p {
+  margin-bottom: 20px;
+}
+
+.redes a {
+  letter-spacing: 5px;
+  font-size: 50px;
+  color: #fff;
+}
+
+.redes a:hover {
+  color: gold;
+}
+
+.subir {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  font-family: 25px;
+  color: #fff;
+  background-color: #70e000;
+  text-align: center;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  border: 2px solid white;
+}
+
+.final {
+  color: white;
+}
+
+.final:hover {
+  color: gold;
+}
+
+.subir:hover {
+  box-shadow: 0 0 20px white;
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    flex-direction: row;
+    width: 100%;
+    height: 1280px;
+    display: inline-block;
+  }
+  body {
+    width: 1200px;
+  }
+  nav a {
+    color: #FFF;
+    height: 120px;
+    width: 93%;
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-size: 60px;
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    display: block;
+    margin: 25px 25px 25px 25px;
+  }
+  .logo img {
+    height: 300px;
+    width: 100%;
+  }
+  .subtitulo, .subtitulo1, .subtitulo2 {
+    width: 100%;
+    text-align: center;
+  }
+  .subtitulo1 {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 25px;
+    text-align: center;
+    justify-content: center;
+  }
+  .subtitulo2 {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+  }
+  .banner--pesca {
+    height: 1200px;
+  }
+  .banner--pesca h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--pesca p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--playa {
+    height: 1200px;
+    background-image: url(../images/banners/playa.avif);
+    background-position: center;
+    background-size: cover;
+  }
+  .banner--playa h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--playa p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--carnaval {
+    height: 1200px;
+  }
+  .banner--carnaval h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--carnaval p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--festivales {
+    height: 1200px;
+  }
+  .banner--festivales h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--festivales p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  iframe {
+    padding: 45px;
+    width: 100%;
+    height: 650px;
+    border-radius: 80px;
+  }
+  footer {
+    font-size: 50px;
+    margin-top: 225px;
+    width: 1220px;
+  }
+  .fa-brands {
+    font-size: 100px;
+    padding: 20px;
+    color: gold;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  header {
+    flex-direction: row;
+    min-width: 1110px;
+    height: 230px;
+  }
+  .titulo {
+    width: 1110px;
+  }
+  #carouselExampleIndicators {
+    width: 1110px;
+  }
+  h2 {
+    display: flex;
+    text-align: center;
+  }
+  .subtitulo, .subtitulo1, .subtitulo2 {
+    width: 1110px;
+    text-align: center;
+  }
+  .subtitulo1 {
+    width: 1110px;
+    height: 600px;
+    margin-bottom: 25px;
+    text-align: center;
+    justify-content: center;
+  }
+  .subtitulo2 {
+    width: 1110px;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+  }
+  .banner--pesca {
+    height: 1200px;
+  }
+  .banner--pesca h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--pesca p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--playa {
+    height: 1200px;
+  }
+  .banner--playa h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--playa p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--carnaval {
+    height: 1200px;
+  }
+  .banner--carnaval h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--carnaval p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--festivales {
+    height: 1200px;
+  }
+  .banner--festivales h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--festivales p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  iframe {
+    padding: 50px;
+    width: 1110px;
+    height: 650px;
+    border-radius: 80px;
+  }
+  footer {
+    width: 1110px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    flex-direction: row;
+    min-width: 1110px;
+    height: 230px;
+  }
+  .titulo {
+    width: 1110px;
+  }
+  #carouselExampleIndicators {
+    width: 1110px;
+  }
+  h2 {
+    display: flex;
+    text-align: center;
+  }
+  .subtitulo, .subtitulo1, .subtitulo2 {
+    width: 1110px;
+    text-align: center;
+  }
+  .subtitulo1 {
+    width: 1110px;
+    height: 600px;
+    margin-bottom: 25px;
+    text-align: center;
+    justify-content: center;
+  }
+  .subtitulo2 {
+    width: 1110px;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+  }
+  .banner--pesca {
+    height: 1200px;
+  }
+  .banner--pesca h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--pesca p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--playa {
+    height: 1200px;
+  }
+  .banner--playa h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--playa p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--carnaval {
+    height: 1200px;
+  }
+  .banner--carnaval h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--carnaval p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  .banner--festivales {
+    height: 1200px;
+  }
+  .banner--festivales h2 {
+    margin-left: 450px;
+    font-size: 100px;
+  }
+  .banner--festivales p {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  iframe {
+    padding: 50px;
+    width: 1110px;
+    height: 650px;
+    border-radius: 80px;
+  }
+  footer {
+    width: 1110px;
+  }
+}
+/* @mixin escritorio() {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@include escritorio() {
+    body{
+        max-width: 1903px;
+    }
+}
+ */
+/* fin index */
+.titulo2 {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 90px;
+  padding: 70px 0 70px 100px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all 0.4s;
+  background: rgb(247, 255, 114);
+  background: radial-gradient(circle, rgba(247, 255, 114, 0) 0%, rgba(66, 203, 167, 0.7483368347) 100%);
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: linear-gradient(to top, #53f01a 0%, rgb(157, 255, 133) 100%);
+  padding: 5px;
+  height: 5830px;
+}
+.flex-container img {
+  margin-top: 10px;
+  transition: all 0.9s;
+  filter: grayscale(60%);
+}
+
+.flex-container img:hover {
+  transform: scale(1.05);
+  transition: all 0.9s;
+  filter: grayscale(0);
+}
+
+.flex-item {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  flex: 25%;
+}
+
+img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#ciudad {
+  width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .flex-container {
+    height: 31000px;
+  }
+  .flex-item {
+    flex: 100%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .flex-item {
+    flex: 40%;
+  }
+  .flex-container {
+    height: 10000px;
+  }
+  body {
+    width: 1110px;
+  }
+  .fix {
+    width: 1110px;
+    position: relative;
+    margin-top: 4450px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    width: 1110px;
+  }
+}
+.servicios {
+  width: 100%;
+  min-height: 300px;
+  background-color: #9EF01A;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 200px);
+  padding: 20px;
+  grid-gap: 15px;
+}
+
+.item {
+  border: 3px solid #333;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.9s;
+  filter: grayscale(100);
+  font-size: 50px;
+  font-size: 500;
+  font-family: "Rajdhani", sans-serif;
+  color: #ff006e;
+  text-transform: uppercase;
+  background-image: url(../images/servicios/img1.avif);
+}
+
+.item:hover {
+  transform: scale(1.09);
+  transition: all 0.9s;
+  filter: grayscale(0);
+  color: gold;
+}
+
+.item1 {
+  background-image: url(../images/servicios/img1.avif);
+}
+
+.item2 {
+  background-image: url(../images/servicios/img2.avif);
+}
+
+.item3 {
+  background-image: url(../images/servicios/img3.avif);
+}
+
+.item4 {
+  background-image: url(../images/servicios/img4.avif);
+}
+
+.item5 {
+  background-image: url(../images/servicios/img5.avif);
+}
+
+.item6 {
+  background-image: url(../images/servicios/img6.avif);
+}
+
+.item7 {
+  background-image: url(../images/servicios/img7.avif);
+}
+
+.item8 {
+  background-image: url(../images/servicios/img8.avif);
+}
+
+@media only screen and (max-width: 480px) {
+  .servicios {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 300px);
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .servicios {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 300px);
+  }
+  .item1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .item2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .item3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .item4 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  .item5 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  .item6 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .item7 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .item8 {
+    grid-column: 2/4;
+    grid-row: 4/5;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .servicios {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 200px;
+  }
+}
+.parrafo, .parrafo5, .parrafo4, .parrafo3, .parrafo2, .parrafo1 {
+  height: 850px;
+  width: 50%;
+  background-color: rgb(244, 244, 244);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 500px;
+  border-radius: 15px;
+  border: 3px solid black;
+  margin-top: 50px;
+  padding: 130px 100px 150px 100px;
+}
+.parrafo span, .parrafo5 span, .parrafo4 span, .parrafo3 span, .parrafo2 span, .parrafo1 span {
+  align-items: center;
+  justify-content: stretch;
+  font-size: 48px;
+  padding-bottom: 50px;
+  font-family: "Rajdhani", sans-serif;
+}
+.parrafo p, .parrafo5 p, .parrafo4 p, .parrafo3 p, .parrafo2 p, .parrafo1 p {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 17px;
+}
+
+.parrafo1 {
+  height: 950px;
+}
+
+.parrafo2 {
+  height: 650px;
+}
+
+.parrafo3 {
+  height: 1000px;
+}
+
+.parrafo5 {
+  height: 650px;
+  margin-bottom: 80px;
+}
+
+.sub {
+  transition: all 0.4s;
+}
+
+.sub:hover {
+  color: springgreen;
+  text-shadow: 0 0 7px #000, 0 0 7px #000, 0 0 7px #000, 0 0 7px #000;
+  transition: all 0.4s;
+}
+
+@media only screen and (max-width: 480px) {
+  .parrafo, .parrafo1, .parrafo2, .parrafo3, .parrafo4, .parrafo5 {
+    height: 1500px;
+    width: 93%;
+    margin-left: 20px;
+    background-color: #000;
+    color: white;
+  }
+  .parrafo span, .parrafo1 span, .parrafo2 span, .parrafo3 span, .parrafo4 span, .parrafo5 span {
+    align-items: center;
+    justify-content: stretch;
+    font-size: 100px;
+    padding-bottom: 50px;
+    font-family: "Rajdhani", sans-serif;
+  }
+  .parrafo p, .parrafo1 p, .parrafo2 p, .parrafo3 p, .parrafo4 p, .parrafo5 p {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 35px;
+  }
+  .parrafo3 {
+    height: 2300px;
+  }
+  .parrafo5 {
+    height: 1100px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  body {
+    width: 1510px;
+  }
+  .parrafo1 {
+    height: 1000px;
+  }
+  .parrafo2 {
+    height: 800px;
+  }
+  .parrafo3 {
+    height: 1150px;
+  }
+  .parrafo4 {
+    height: 900px;
+  }
+  .parrafo5 {
+    height: 750px;
+  }
+  footer {
+    width: 1510px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    width: 1510px;
+  }
+  header {
+    width: 1510px;
+  }
+  .parrafo1 {
+    height: 1000px;
+    width: 95%;
+    margin: 38px;
+  }
+  .parrafo2 {
+    height: 1000px;
+    width: 95%;
+    margin: 38px;
+  }
+  .parrafo3 {
+    height: 1000px;
+    width: 95%;
+    margin: 38px;
+  }
+  .parrafo4 {
+    height: 1000px;
+    width: 95%;
+    margin: 38px;
+  }
+  .parrafo5 {
+    height: 1000px;
+    width: 95%;
+    margin: 38px;
+  }
+  footer {
+    width: 1510px;
+  }
+}
+.historia {
+  font-size: 70px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+h3 {
+  margin-left: 20px;
+  font-family: "nexa";
+}
+h3 .comollegar {
+  margin-left: 300px;
+  margin-bottom: 25px;
+  display: inline-block;
+  width: 1000px;
+}
+
+.comollegar {
+  font-size: 70px;
+  display: flex;
+  font-family: "nexa";
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+.distancia1 {
+  width: 70%;
+}
+
+#km {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+#km:hover {
+  color: gold;
+}
+
+.distancia, .viaje {
+  font-size: 30px;
+  font-family: "nexa";
+  font-weight: 500;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 30px;
+  padding: 50px;
+}
+
+.viaje {
+  width: 700px;
+  height: auto;
+  text-align: left;
+  padding-left: 80px;
+}
+
+@media only screen and (max-width: 480px) {
+  .distancia, .viaje {
+    font-size: 40px;
+    margin: 20px;
+    margin-left: 25px;
+    width: 1000px;
+  }
+}/*# sourceMappingURL=estilos.css.map */

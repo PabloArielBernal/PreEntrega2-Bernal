@@ -1,0 +1,175 @@
+.parrafo{
+    height: 850px;
+    width: 50%;
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 500px;
+    border-radius: 15px;
+    border: 3px solid black;
+    margin-top: 50px;
+    padding: 130px 100px 150px 100px;
+    span {
+        align-items: center;
+        justify-content: stretch;
+        font-size: 48px;
+        padding-bottom: 50px;
+        font-family: $fuente2;
+    }
+    p {
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+    }
+}
+
+.parrafo1{
+    @extend .parrafo;
+    height: 950px;
+}
+
+.parrafo2{
+    @extend .parrafo;
+    height: 650px;
+}
+.parrafo3{
+    @extend .parrafo;
+    height: 1000px;
+}
+
+.parrafo4{
+    @extend .parrafo;
+}
+
+.parrafo5{
+    @extend .parrafo;
+    height: 650px;
+    margin-bottom: 80px;
+}
+
+.sub{
+    transition: all 0.4s;
+}
+
+.sub:hover {
+    color: springgreen;
+    text-shadow: 0 0 7px #000, 0 0 7px #000, 0 0 7px #000, 0 0 7px #000;
+    transition: all 0.4s;
+}
+
+@include movil(){
+    .parrafo{
+        height: 1500px;
+        width: 93%;
+        margin-left: 20px;
+        background-color: #000;
+        color: white;
+        span {
+            align-items: center;
+            justify-content: stretch;
+            font-size: 100px;
+            padding-bottom: 50px;
+            font-family: $fuente2;
+        }
+        p {
+            font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 35px;
+        }       
+    }
+
+    .parrafo1{
+        @extend .parrafo;
+    }
+
+    .parrafo2{
+        @extend .parrafo;
+    }
+
+    .parrafo3{
+        @extend .parrafo;
+        height: 2300px;
+    }
+
+    .parrafo4{
+        @extend .parrafo;
+    }
+
+    .parrafo5{
+        @extend .parrafo;
+        height: 1100px;
+    }
+}
+
+@include landscape(){
+    body{ 
+        width: 1510px;
+    }
+
+    .parrafo1{
+        height: 1000px;
+    }
+
+    .parrafo2{
+        height: 800px;
+    }
+
+    .parrafo3{
+        height: 1150px;
+    }
+
+    .parrafo4{
+        height: 900px;
+    }
+
+    .parrafo5{
+        height: 750px;
+    }
+
+    footer{
+        width: 1510px;
+    }
+}
+
+@include tablet(){
+    body {
+        width: 1510px;
+    }
+
+    header {
+        width: 1510px;
+    }
+    .parrafo1 {
+        height: 1000px;
+        width: 95%;
+        margin: 38px;
+    }
+
+    .parrafo2 {
+        height: 1000px;
+        width: 95%;
+        margin: 38px;
+    }
+
+    .parrafo3 {
+        height: 1000px;
+        width: 95%;
+        margin: 38px;
+    }
+
+    .parrafo4 {
+        height: 1000px;
+        width: 95%;
+        margin: 38px;
+    }
+
+    .parrafo5 {
+        height: 1000px;
+        width: 95%;
+        margin: 38px;
+    }
+
+    footer{
+        width: 1510px;
+    }
+}
